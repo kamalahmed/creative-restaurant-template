@@ -229,6 +229,14 @@ body {
   width: 100%;
 }
 
+.content .banner div {
+  display: none;
+}
+
+.content .banner div.active {
+  display: initial;
+}
+
 .content .banner-image {
   width: 440px;
   height: 440px;
@@ -246,6 +254,11 @@ body {
      object-fit: cover;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  opacity: 0;
+}
+
+.content .banner-image img.active {
+  opacity: 1;
 }
 
 .icons-wrapper {

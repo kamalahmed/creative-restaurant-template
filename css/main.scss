@@ -150,6 +150,13 @@ body {
         width: 100%;
       }
     }
+
+    div {
+        display: none;
+    }
+    div.active {
+        display: initial;
+    }
   }
   .banner-image {
     width: 440px;
@@ -164,6 +171,11 @@ body {
       width: 100%;
       object-fit: cover;
       transition: 0.3s;
+      opacity: 0;
+
+      &.active {
+          opacity: 1;
+      }
     }
   }
 }

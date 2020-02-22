@@ -1,49 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Website | Kamal Ahmed</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <a href="#" class="logo">Sylheti<span>Foody</span></a>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </header>
-        <div class="content">
-            <div class="banner">
-                <div>
-                    <h2>Healthy Food <br> Healthy Life</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam blanditiis assumenda pariatur temporibus minima sunt sapiente quaerat asperiores. Dolorum, explicabo.</p>
-                    <a href="#" class="readmore">Read More</a>
-                </div>
-            </div>
-            <div class="banner-image"><img src="images/veg3.jpg" alt=""></div>
-        </div> 
-        <!-- end .content -->
-
-        <div class="icons-wrapper">
-            <ul class="social-icons">
-                <li><a href="#"><img src="images/facebook.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/instagram.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/twitter.svg" alt=""></a></li>
-            </ul>
-            
-            <ul class="slider-controls">
-                <li><a href="#"><img src="images/arrow.svg" class="left-arrow" alt=""></a></li>
-                <li><a href="#"><img src="images/arrow.svg" class="right-arrow" alt=""></a></li>
-            </ul>
-
-            
+      <header class="header">
+        <a href="#" class="logo">Sylheti<span>Foody</span></a>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="banner">
+          <div class="active">
+            <h2>
+              Healthy Food <br />
+              Healthy Life
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              blanditiis assumenda pariatur temporibus minima sunt sapiente
+              quaerat asperiores. Dolorum, explicabo.
+            </p>
+            <a href="#" class="readmore">Read More</a>
+          </div>
+          <div>
+            <h2>
+              Work hard <br />
+              Eat Good
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              blanditiis assumenda pariatur temporibus minima sunt sapiente
+              quaerat asperiores. Dolorum, explicabo.
+            </p>
+            <a href="#" class="readmore">Read More</a>
+          </div>
+          <div>
+            <h2>
+              Tasty Food <br />
+              Happy Mood
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              blanditiis assumenda pariatur temporibus minima sunt sapiente
+              quaerat asperiores. Dolorum, explicabo.
+            </p>
+            <a href="#" class="readmore">Read More</a>
+          </div>
         </div>
+        <div class="banner-image" id="image-slider">
+            <img src="images/veg1.jpg" alt="banner image" class="active" />
+            <img src="images/veg2.jpg" alt="banner image" />
+            <img src="images/veg3.jpg" alt="banner image" />
+        </div>
+      </div>
+      <!-- end .content -->
+
+      <div class="icons-wrapper">
+        <ul class="social-icons">
+          <li>
+            <a href="#"><img src="images/facebook.svg" alt=""/></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/instagram.svg" alt=""/></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/twitter.svg" alt=""/></a>
+          </li>
+        </ul>
+
+        <ul class="slider-controls">
+          <li>
+            <a href="#"
+              ><img src="images/arrow.svg" class="left-arrow" id="prev" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/arrow.svg" class="right-arrow" id="next" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
