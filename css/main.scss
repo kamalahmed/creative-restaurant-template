@@ -152,10 +152,10 @@ body {
     }
 
     div {
-        display: none;
+      display: none;
     }
     div.active {
-        display: initial;
+      display: initial;
     }
   }
   .banner-image {
@@ -170,65 +170,72 @@ body {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      transition: 0.3s;
+      transition: 0.5s ease-in-out;
       opacity: 0;
 
       &.active {
-          opacity: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// icons
+.icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+
+  .social-icons,
+  .slider-controls {
+    display: flex;
+    position: relative;
+    img {
+      width: 24px;
+      display: inline-block;
+    }
+  }
+  .social-icons li {
+    margin-right: 30px;
+    &::last-child {
+      margin-right: 0;
+    }
+
+    img {
+      transition: 0.3s ease-in-out;
+    }
+    &:hover img {
+      transform: translateY(-5px) scale(1.2);
+    }
+  }
+
+  .slider-controls li {
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    filter: invert(0.5);
+    &:first-child {
+      margin-right: 20px;
+    }
+    &:hover {
+      filter: invert(0);
+    }
+
+    img {
+      border: 2px solid #fff;
+      padding: 10px;
+      &.right-arrow {
+        transform: rotate(180deg);
       }
     }
   }
 }
 
 
-// icons
-.icons-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-
-    .social-icons,
-    .slider-controls {
-        display: flex;
-        position: relative;
-        img{
-            width: 24px;
-            display: inline-block;
-        }
-    }
-    .social-icons li{
-        margin-right: 30px;
-        &::last-child {
-            margin-right: 0;
-        }
-
-        img {
-            transition: 0.3s ease-in-out;
-        }
-        &:hover img {
-            transform: translateY(-5px) scale(1.2);
-        }
-    }
-
-    .slider-controls li {
-        cursor: pointer;
-        transition: 0.4s ease-in-out;
-        filter: invert(.5);
-        &:first-child {
-            margin-right: 20px;
-        }
-        &:hover {
-            filter: invert(0);
-        }
-
-
-        img {
-            border: 2px solid #fff;
-            padding: 10px;
-            &.right-arrow {
-                transform: rotate(180deg);
-            }
-        }
-    }
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
 }
