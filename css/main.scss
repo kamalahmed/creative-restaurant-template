@@ -11,7 +11,8 @@ body {
 .container {
   position: relative;
   padding: 0 100px;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   &::before,
   &::after {
     position: absolute;
@@ -19,7 +20,6 @@ body {
   }
   &::before {
     content: "";
-
     top: 0;
     right: 0;
     height: 100%;
@@ -29,7 +29,7 @@ body {
 
   &::after {
     content: "Healthy";
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     color: #000000;
     opacity: 0.04;
@@ -166,4 +166,57 @@ body {
       transition: 0.3s;
     }
   }
+}
+
+
+// icons
+.icons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+
+    .social-icons,
+    .slider-controls {
+        display: flex;
+        position: relative;
+        img{
+            width: 24px;
+            display: inline-block;
+        }
+    }
+    .social-icons li{
+        margin-right: 30px;
+        &::last-child {
+            margin-right: 0;
+        }
+
+        img {
+            transition: 0.3s ease-in-out;
+        }
+        &:hover img {
+            transform: translateY(-5px) scale(1.2);
+        }
+    }
+
+    .slider-controls li {
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        filter: invert(.5);
+        &:first-child {
+            margin-right: 20px;
+        }
+        &:hover {
+            filter: invert(0);
+        }
+
+
+        img {
+            border: 2px solid #fff;
+            padding: 10px;
+            &.right-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
 }
