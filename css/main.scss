@@ -1,0 +1,93 @@
+@import "reset";
+$accent: #78ff00;
+$text: #333333;
+body {
+  font-family: "Poppins", sans-serif;
+}
+.text-white {
+  color: #fff;
+}
+.container {
+  position: relative;
+  padding: 0 100px;
+  min-height: 100vh;
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -2;
+  }
+  &::before {
+    content: "";
+
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    background: $text;
+  }
+
+  &::after {
+    content: "Healthy";
+    bottom: 0;
+    left: 0;
+    color: #000000;
+    opacity: 0.04;
+    font-size: 18vw;
+    font-weight: 700;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  .logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text;
+    text-decoration: none;
+    font-size: 1.875em;
+
+    span {
+      color: $accent;
+    }
+  }
+  // Menu
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 0 20px;
+
+      a {
+        position: relative;
+
+        text-decoration: none;
+        font-size: 1.125em;
+        color: $text;
+        padding: 4px 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: darken($color: $accent, $amount: 5);
+          z-index: -1;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover:before,
+        &.active:before {
+          width: 50%;
+        }
+      }
+
+      &:nth-last-of-type(-n + 2) a {
+        color: #fff;
+      }
+    }
+  }
+}
