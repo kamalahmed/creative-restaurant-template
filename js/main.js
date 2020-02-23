@@ -49,11 +49,13 @@ function getPrevIndex(slides, index) {
 }
 
 // attach the triggers
-nextLink.addEventListener("click", () => {
+nextLink.addEventListener("click", (event) => {
+  event.preventDefault();  
   nextSlide(slides);
   nextTextSlide(textSlides);
 });
-prevLink.addEventListener("click", () => {
+prevLink.addEventListener("click", (event) => {
+  event.preventDefault(); 
   prevSlide(slides);
   prevTextSlide(textSlides);
 });
