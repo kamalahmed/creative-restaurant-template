@@ -1,3 +1,4 @@
+const header = document.getElementById("header"); // for mobile menu, add a class
 const slides = document.querySelectorAll("#image-slider > img");
 const textSlides = document.querySelectorAll("#text-slider > div");
 const nextLink = document.getElementById("next");
@@ -48,11 +49,19 @@ function getPrevIndex(slides, index) {
 }
 
 // attach the triggers
-nextLink.addEventListener("click", function(el, event) {
+nextLink.addEventListener("click", () => {
   nextSlide(slides);
   nextTextSlide(textSlides);
 });
-prevLink.addEventListener("click", function(el, event) {
+prevLink.addEventListener("click", () => {
   prevSlide(slides);
   prevTextSlide(textSlides);
 });
+
+// Mobile menu toggle
+document.getElementById("menu-toggle").onclick = () => {
+  header.classList.add("mobile-menu-active");
+};
+document.getElementById("menu-close").onclick = () => {
+  header.classList.remove("mobile-menu-active");
+};
